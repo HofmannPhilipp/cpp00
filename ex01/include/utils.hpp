@@ -13,14 +13,21 @@
 #ifndef UTILS_HPP
 #define UTILS_HPP
 
-#include <string.h>
+#include <string>
+#include <sstream>
 #include <iostream>
+#include <iomanip>
+
 
 class PhoneBook ;
 
 std::string	format(const std::string& str);
 void		add(PhoneBook& book);
 void		search(PhoneBook book);
-void		error_msg(std::string msg);
+void		printErrorMsg(std::string msg);
+int 	    stringToIntSafe(const std::string& str);
+void	    printSearchHeader(void);
+void        add(PhoneBook& book);
+void        search(PhoneBook book);
 
 #endif

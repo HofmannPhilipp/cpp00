@@ -30,7 +30,7 @@ void	PhoneBook::printContacts(void) {
 
 void	PhoneBook::printContact(int index) {
 	if (index >= this->contactIndex || index < 0 || index > MAX_CONTACTS) {
-		error_msg("Wrong Index");
+		printErrorMsg("Wrong Index");
 		return ;
 	}
 	contacts[index].printFullDetails();
