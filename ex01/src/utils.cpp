@@ -6,7 +6,7 @@
 /*   By: phhofman <phhofman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 11:02:56 by phhofman          #+#    #+#             */
-/*   Updated: 2025/06/26 17:10:02 by phhofman         ###   ########.fr       */
+/*   Updated: 2025/07/02 13:23:02 by phhofman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,12 +16,21 @@ void	printErrorMsg(std::string msg) {
 	std::cout << "\033[31m" << msg << "\033[0m" << std::endl;
 }
 
-int 	stringToIntSafe(const std::string& str) {
-    std::stringstream ss(str);
-    int result;
-    ss >> result;
-    result = !ss.fail() && ss.eof() ? result : -1;
-    return result;
+std::string	readInput(std::string prompt) {
+	std::string buffer;
+
+	while (true) {
+		std::cout << prompt << std::flush;
+		if (std::getline(std::cin, buffer) && !buffer.empty())
+			return buffer;
+		if (std::cin.eof()) {
+			std::cin.clear();
+			std::cout << std::endl;
+			printErrorMsg("EOF (Ctrl + D) Input not allowed.");
+			exit(1);
+		}
+	}
+	return "";
 }
 
 std::string format(const std::string& str) {

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   phonebook.hpp                                      :+:      :+:    :+:   */
+/*   PhoneBook.hpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phhofman <phhofman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 11:06:20 by phhofman          #+#    #+#             */
-/*   Updated: 2025/06/26 17:09:18 by phhofman         ###   ########.fr       */
+/*   Updated: 2025/07/02 17:18:25 by phhofman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class PhoneBook {
 	public:
 		PhoneBook();
 		void addContact(Contact newContact);
-		void printContacts(void);
+		void printSearchContacts(void);
 		void printContact(int index);
 		int getContactIndex(void);
 };

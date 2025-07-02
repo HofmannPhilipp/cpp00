@@ -3,7 +3,7 @@ NAME = phonebook
 CXX = c++
 CXXFLAGS = -std=c++98 -Wall -Wextra -Werror -Iinclude
 
-VPATH = ./classes
+VPATH = ./classes ./src
 SRCS = main.cpp PhoneBook.cpp Contact.cpp utils.cpp actions.cpp
 OBJS_DIR = objects
 OBJS = $(addprefix $(OBJS_DIR)/, $(SRCS:.cpp=.o))

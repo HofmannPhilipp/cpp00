@@ -6,18 +6,18 @@
 /*   By: phhofman <phhofman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/24 16:45:07 by phhofman          #+#    #+#             */
-/*   Updated: 2025/06/26 17:05:16 by phhofman         ###   ########.fr       */
+/*   Updated: 2025/07/02 17:17:26 by phhofman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Contact.hpp"
 
-Contact::Contact() {
-	this->firstName = "";
-	this->lastName = "";
-	this->nickname = "";
-	this->phoneNumber = "";
-	this->secret = "";
+Contact::Contact(void) {
+	firstName = "";
+	lastName = "";
+	nickname = "";
+	phoneNumber = "";
+	secret = "";
 }
 Contact::Contact(std::string firstName, std::string lastName, std::string nickname, std::string phoneNumber, std::string secret) {
 	this->firstName = firstName;
@@ -27,20 +27,20 @@ Contact::Contact(std::string firstName, std::string lastName, std::string nickna
 	this->secret = secret;
 }
 
-void Contact::printDetails(int index) const {
+void Contact::printSearchDetails(int index) const {
 	std::cout << std::setw(10) << index << "|";
-	std::cout << std::setw(10) << format(this->firstName) << "|";
-	std::cout << std::setw(10) << format(this->lastName) << "|";
-	std::cout << std::setw(10) << format(this->nickname) << std::endl;
+	std::cout << std::setw(10) << format(firstName) << "|";
+	std::cout << std::setw(10) << format(lastName) << "|";
+	std::cout << std::setw(10) << format(nickname) << std::endl;
 }
 
-void Contact::printFullDetails() const {
+void Contact::printFullDetails(void) const {
 	std::cout << "\n--- Contact Details ---" << std::endl;
-	std::cout << "First name     : " << this->firstName << std::endl;
-	std::cout << "Last name      : " << this->lastName << std::endl;
-	std::cout << "Nickname       : " << this->nickname << std::endl;
-	std::cout << "Phone number   : " << this->phoneNumber << std::endl;
-	std::cout << "Darkest secret : " << this->secret << std::endl;
+	std::cout << "First name     : " << firstName << std::endl;
+	std::cout << "Last name      : " << lastName << std::endl;
+	std::cout << "Nickname       : " << nickname << std::endl;
+	std::cout << "Phone number   : " << phoneNumber << std::endl;
+	std::cout << "Darkest secret : " << secret << std::endl;
 	std::cout << "------------------------" << std::endl;
 }
 

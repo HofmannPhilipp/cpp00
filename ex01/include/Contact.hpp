@@ -6,7 +6,7 @@
 /*   By: phhofman <phhofman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 11:17:02 by phhofman          #+#    #+#             */
-/*   Updated: 2025/06/26 12:56:00 by phhofman         ###   ########.fr       */
+/*   Updated: 2025/07/02 17:17:22 by phhofman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class Contact {
 		Contact();
 		Contact(std::string firstName, std::string lastName, std::string nickname, std::string phoneNumber, std::string secret);
 
-		void printDetails(int index) const;
+		void printSearchDetails(int index) const;
 		void printFullDetails() const;
 };
 

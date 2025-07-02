@@ -6,7 +6,7 @@
 /*   By: phhofman <phhofman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/24 16:46:25 by phhofman          #+#    #+#             */
-/*   Updated: 2025/06/26 15:27:50 by phhofman         ###   ########.fr       */
+/*   Updated: 2025/07/02 13:07:08 by phhofman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 int	main(void)
 {
-	std::string buffer;
+	std::string input;
 	PhoneBook book;
 
 	std::cout << "Welcome to my Phonebook 📞📖" << std::endl;
@@ -28,15 +28,14 @@ int	main(void)
 			<< "  SEARCH - Search and display a contact\n"
 			<< "  EXIT	- Exit the program\n" 
 			<< std::endl;
-		std::cout << "> ";
-		std::getline(std::cin, buffer);
-		if (buffer.compare("ADD") == 0) {
+		input = readInput("> ");
+		if (input.compare("ADD") == 0) {
 			add(book);
 		}
-		else if (buffer.compare("SEARCH") == 0) {
+		else if (input.compare("SEARCH") == 0) {
 			search(book);
 		}
-		else if (buffer.compare("EXIT") == 0) {
+		else if (input.compare("EXIT") == 0) {
 			break;
 		}
 	}
