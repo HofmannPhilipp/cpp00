@@ -1,7 +1,7 @@
 
 NAME = phonebook
 CXX = c++
-CXXFLAGS = -std=c++98 -Wall -Wextra -Werror -Iinclude
+CXXFLAGS = -std=c++17 -Wall -Wextra -Werror -Iinclude
 
 VPATH = ./classes ./src
 SRCS = main.cpp PhoneBook.cpp Contact.cpp utils.cpp actions.cpp

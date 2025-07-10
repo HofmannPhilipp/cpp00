@@ -6,7 +6,7 @@
 /*   By: phhofman <phhofman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/26 12:53:47 by phhofman          #+#    #+#             */
-/*   Updated: 2025/07/02 13:03:36 by phhofman         ###   ########.fr       */
+/*   Updated: 2025/07/10 12:53:36 by phhofman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,16 @@
 #include <iostream>
 #include <iomanip>
 
+class PhoneBook;
 
-class PhoneBook ;
-
-std::string	format(const std::string& str);
-void		add(PhoneBook& book);
-void		search(PhoneBook book);
-void		printErrorMsg(std::string msg);
-std::string	readInput(std::string prompt);
-void	 	printSearchHeader(void);
-void		add(PhoneBook& book);
-void		search(PhoneBook book);
+std::string format(const std::string &str);
+void add(PhoneBook &book);
+void search(PhoneBook book);
+void printErrorMsg(std::string msg);
+std::string readInput(std::string prompt);
+void printSearchHeader(void);
+void add(PhoneBook &book);
+void search(PhoneBook book);
+bool isValidPhoneNumber(const std::string &number);
 
 #endif

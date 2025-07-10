@@ -6,7 +6,7 @@
 /*   By: phhofman <phhofman@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/24 16:46:25 by phhofman          #+#    #+#             */
-/*   Updated: 2025/07/02 13:07:08 by phhofman         ###   ########.fr       */
+/*   Updated: 2025/07/10 13:15:21 by phhofman         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,28 +16,32 @@
 #include "PhoneBook.hpp"
 #include "utils.hpp"
 
-int	main(void)
+int main(void)
 {
 	std::string input;
 	PhoneBook book;
 
-	std::cout << "Welcome to my Phonebook 📞📖" << std::endl;
-	while(1) {
+	std::cout << "📞 Welcome to my Phonebook 📖" << std::endl;
+	while (1)
+	{
 		std::cout << "\nPlease enter a command:\n"
-			<< "  ADD	- Add a new contact\n"
-			<< "  SEARCH - Search and display a contact\n"
-			<< "  EXIT	- Exit the program\n" 
-			<< std::endl;
+				  << "  ADD    - Add a new contact\n"
+				  << "  SEARCH - Search and display a contact\n"
+				  << "  EXIT   - Exit the program\n"
+				  << std::endl;
+
 		input = readInput("> ");
-		if (input.compare("ADD") == 0) {
+		if (input == "ADD")
 			add(book);
-		}
-		else if (input.compare("SEARCH") == 0) {
+		else if (input == "SEARCH")
 			search(book);
-		}
-		else if (input.compare("EXIT") == 0) {
+		else if (input == "EXIT")
+		{
+			std::cout << "👋 Exiting PhoneBook. Goodbye!" << std::endl;
 			break;
 		}
+		else
+			printErrorMsg("❌ Unknown command: Please enter ADD, SEARCH or EXIT.");
 	}
 	return 0;
 }
