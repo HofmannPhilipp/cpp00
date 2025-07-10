@@ -31,7 +31,11 @@ void add(PhoneBook &book)
 		return;
 
 	while (!isValidPhoneNumber(phoneNumber))
+	{
 		phoneNumber = readInput("PHONE NUMBER	: ");
+		if (phoneNumber == "EXIT")
+			return;
+	}
 	
 	secret = readInput("DARKEST SECRET	: ");
 	if (secret == "EXIT")
